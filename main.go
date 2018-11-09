@@ -20,7 +20,7 @@ func main() {
 	}
 
 	byLengthThenAlphabetically := func(i, j int) bool {
-		return len(lines[i]) < len(lines[j]) || len(lines[i]) < len(lines[j]) && lines[i] < lines[j]
+		return len(lines[i]) < len(lines[j]) || len(lines[i]) == len(lines[j]) && lines[i] < lines[j]
 	}
 
 	sort.Slice(lines, byLengthThenAlphabetically)
